@@ -16,6 +16,8 @@
 		48A2A50829B884E500D98D85 /* UpcomingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A2A50729B884E500D98D85 /* UpcomingViewController.swift */; };
 		48A2A50A29B884F000D98D85 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A2A50929B884F000D98D85 /* SearchViewController.swift */; };
 		48A2A50C29B884FD00D98D85 /* DownloadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A2A50B29B884FD00D98D85 /* DownloadsViewController.swift */; };
+		48A2A51329B88D5B00D98D85 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A2A51229B88D5B00D98D85 /* CollectionViewTableViewCell.swift */; };
+		48A2A51529B89E5C00D98D85 /* HeroHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A2A51429B89E5C00D98D85 /* HeroHeaderUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		48A2A50729B884E500D98D85 /* UpcomingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingViewController.swift; sourceTree = "<group>"; };
 		48A2A50929B884F000D98D85 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		48A2A50B29B884FD00D98D85 /* DownloadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsViewController.swift; sourceTree = "<group>"; };
+		48A2A51229B88D5B00D98D85 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
+		48A2A51429B89E5C00D98D85 /* HeroHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,11 @@
 		48A2A4EF29B87FE900D98D85 /* Netflix */ = {
 			isa = PBXGroup;
 			children = (
+				48A2A51129B88D2E00D98D85 /* Managers */,
+				48A2A51029B88D2500D98D85 /* Resources */,
+				48A2A50D29B88CFE00D98D85 /* Models */,
+				48A2A50F29B88D0E00D98D85 /* Views */,
+				48A2A50E29B88D0300D98D85 /* ViewModels */,
 				48A2A50429B884A500D98D85 /* Controllers */,
 				48A2A4F029B87FE900D98D85 /* AppDelegate.swift */,
 				48A2A4F229B87FE900D98D85 /* SceneDelegate.swift */,
@@ -82,6 +91,43 @@
 				48A2A50B29B884FD00D98D85 /* DownloadsViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		48A2A50D29B88CFE00D98D85 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		48A2A50E29B88D0300D98D85 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		48A2A50F29B88D0E00D98D85 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				48A2A51229B88D5B00D98D85 /* CollectionViewTableViewCell.swift */,
+				48A2A51429B89E5C00D98D85 /* HeroHeaderUIView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		48A2A51029B88D2500D98D85 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		48A2A51129B88D2E00D98D85 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +202,8 @@
 			files = (
 				48A2A50A29B884F000D98D85 /* SearchViewController.swift in Sources */,
 				48A2A4F529B87FE900D98D85 /* MainTabBarViewController.swift in Sources */,
+				48A2A51329B88D5B00D98D85 /* CollectionViewTableViewCell.swift in Sources */,
+				48A2A51529B89E5C00D98D85 /* HeroHeaderUIView.swift in Sources */,
 				48A2A50C29B884FD00D98D85 /* DownloadsViewController.swift in Sources */,
 				48A2A4F129B87FE900D98D85 /* AppDelegate.swift in Sources */,
 				48A2A4F329B87FE900D98D85 /* SceneDelegate.swift in Sources */,
