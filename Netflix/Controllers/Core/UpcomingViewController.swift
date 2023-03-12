@@ -46,8 +46,6 @@ class UpcomingViewController: UIViewController {
                 }
             case let .failure(error):
                 print(error.localizedDescription)
-            default:
-                break
             }
         }
     }
