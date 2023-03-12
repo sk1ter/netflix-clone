@@ -20,6 +20,9 @@
 		480FF33C29BE3C05009B94F9 /* TitlePreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480FF33B29BE3C05009B94F9 /* TitlePreviewViewModel.swift */; };
 		48737BA329BE571B008CC7C9 /* NetflixCloneModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 48737BA129BE571B008CC7C9 /* NetflixCloneModel.xcdatamodeld */; };
 		48737BA529BE57FE008CC7C9 /* DataPersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48737BA429BE57FE008CC7C9 /* DataPersistenceManager.swift */; };
+		48737BB129BE673D008CC7C9 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 48737BAE29BE673D008CC7C9 /* home.png */; };
+		48737BB229BE673D008CC7C9 /* upcoming.png in Resources */ = {isa = PBXBuildFile; fileRef = 48737BAF29BE673D008CC7C9 /* upcoming.png */; };
+		48737BB329BE673D008CC7C9 /* details.png in Resources */ = {isa = PBXBuildFile; fileRef = 48737BB029BE673D008CC7C9 /* details.png */; };
 		48A2A4F129B87FE900D98D85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A2A4F029B87FE900D98D85 /* AppDelegate.swift */; };
 		48A2A4F329B87FE900D98D85 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A2A4F229B87FE900D98D85 /* SceneDelegate.swift */; };
 		48A2A4F529B87FE900D98D85 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A2A4F429B87FE900D98D85 /* MainTabBarViewController.swift */; };
@@ -46,6 +49,10 @@
 		480FF33B29BE3C05009B94F9 /* TitlePreviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePreviewViewModel.swift; sourceTree = "<group>"; };
 		48737BA229BE571B008CC7C9 /* NetflixCloneModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NetflixCloneModel.xcdatamodel; sourceTree = "<group>"; };
 		48737BA429BE57FE008CC7C9 /* DataPersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistenceManager.swift; sourceTree = "<group>"; };
+		48737BA629BE63DA008CC7C9 /* README.md */ = {isa = PBXFileReference; explicitFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		48737BAE29BE673D008CC7C9 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+		48737BAF29BE673D008CC7C9 /* upcoming.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = upcoming.png; sourceTree = "<group>"; };
+		48737BB029BE673D008CC7C9 /* details.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = details.png; sourceTree = "<group>"; };
 		48A2A4ED29B87FE900D98D85 /* Netflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Netflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48A2A4F029B87FE900D98D85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48A2A4F229B87FE900D98D85 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,9 +102,21 @@
 			path = General;
 			sourceTree = "<group>";
 		};
+		48737BA729BE6478008CC7C9 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				48737BB029BE673D008CC7C9 /* details.png */,
+				48737BAE29BE673D008CC7C9 /* home.png */,
+				48737BAF29BE673D008CC7C9 /* upcoming.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		48A2A4E429B87FE900D98D85 = {
 			isa = PBXGroup;
 			children = (
+				48737BA729BE6478008CC7C9 /* Images */,
+				48737BA629BE63DA008CC7C9 /* README.md */,
 				48A2A4EF29B87FE900D98D85 /* Netflix */,
 				48A2A4EE29B87FE900D98D85 /* Products */,
 			);
@@ -251,8 +270,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48737BB329BE673D008CC7C9 /* details.png in Resources */,
 				48A2A4FD29B87FEB00D98D85 /* LaunchScreen.storyboard in Resources */,
+				48737BB229BE673D008CC7C9 /* upcoming.png in Resources */,
 				48A2A4FA29B87FEB00D98D85 /* Assets.xcassets in Resources */,
+				48737BB129BE673D008CC7C9 /* home.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
