@@ -130,7 +130,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                 }
             }
         default:
-            return UITableViewCell()
+            break;
         }
         return cell
     }
