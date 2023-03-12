@@ -27,7 +27,7 @@ class UpcomingViewController: UIViewController {
 
         upcomingTable.delegate = self
         upcomingTable.dataSource = self
-        
+
         fetchData()
     }
 
@@ -60,15 +60,38 @@ extension UpcomingViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TitleTableViewCell.identifier, for: indexPath) as? TitleTableViewCell else {
             return UITableViewCell()
         }
-    
+
         let text = titles[indexPath.row].original_name ?? titles[indexPath.row].original_title ?? "No title"
-        
+
         cell.configure(with: TitleViewModel(posterURL: titles[indexPath.row].poster_path ?? "", titleName: text))
-    
+
         return cell
     }
-    
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 140
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+
+        let title = titles[indexPath.row]
+
+        guard let titleName = title.original_name ?? title.original_title else {
+            return
+        }
+
+        APICaller.shared.getMovie(with: titleName) { result in
+            switch result {
+            case let .success(videoElement):
+                DispatchQueue.main.async { [weak self] in
+                    let vc = TitleViewController()
+                    vc.configure(with: TitlePreviewViewModel(title: titleName, youtubeView: videoElement, titleOverview: title.overview ?? ""))
+                    self?.navigationController?.pushViewController(vc, animated: true)
+                }
+            case let .failure(error):
+                print(error.localizedDescription)
+            }
+        }
     }
 }

@@ -11,7 +11,7 @@ import UIKit
 struct Constants {
     static let API_KEY = "<your api key here>"
     static let API_URL = "https://api.themoviedb.org"
-    static let GOOGLE_API_KEY = ""
+    static let GOOGLE_API_KEY = "<your api key here>"
     static let YOUTUBE_API_URL = "https://youtube.googleapis.com/youtube/v3"
 }
 

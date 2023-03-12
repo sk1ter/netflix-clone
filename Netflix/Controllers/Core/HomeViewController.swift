@@ -15,6 +15,9 @@ class HomeViewController: UIViewController {
         table.register(CollectionViewTableViewCell.self, forCellReuseIdentifier: CollectionViewTableViewCell.identifier)
         return table
     }()
+    
+    private var randomTrendingMovie: Title?
+    private var headerView: HeroHeaderUIView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,9 +29,23 @@ class HomeViewController: UIViewController {
 
         configureNavigation()
 
-        let headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
+        headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
         homeFeedTable.tableHeaderView = headerView
         getTrendingMovies()
+        configureHeroHeaderView()
+    }
+    
+    private func configureHeroHeaderView() {
+        APICaller.shared.getTrendingMovies { [weak self] result in
+            switch result {
+            case .success(let titles):
+                let selectedItem = titles.randomElement()
+                self?.randomTrendingMovie = selectedItem
+                self?.headerView?.configure(with: TitleViewModel(posterURL: selectedItem?.poster_path ?? "", titleName: selectedItem?.original_name ?? selectedItem?.original_title ?? ""))
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
 
     private func configureNavigation() {
